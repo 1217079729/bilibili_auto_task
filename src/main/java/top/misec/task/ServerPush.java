@@ -1,8 +1,14 @@
 package top.misec.task;
 
 import com.google.gson.JsonObject;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
+
+import java.util.Arrays;
+
+import javax.net.ssl.SSLContext;
+
 import top.misec.apiquery.ApiList;
 import top.misec.login.ServerVerify;
 import top.misec.utils.HttpUtil;
@@ -26,14 +32,19 @@ public class ServerPush {
 
         String pushBody = "text=" + text + "&desp=" + desp;
 
-        JsonObject jsonObject = HttpUtil.doPost(url, pushBody);
-
-        if (jsonObject != null && "success".equals(jsonObject.get("errmsg").getAsString())) {
-            logger.info("任务状态推送成功");
-        } else {
-            logger.info("任务状态推送失败");
-            logger.debug(jsonObject);
+        try {
+            JsonObject jsonObject = HttpUtil.doPost(url, pushBody);
+            if (jsonObject != null && "success".equals(jsonObject.get("errmsg").getAsString())) {
+                logger.info("任务状态推送成功");
+            } else {
+                logger.info(Arrays.toString(SSLContext.getDefault().getSupportedSSLParameters().getProtocols()));
+                logger.info(Arrays.toString(SSLContext.getDefault().createSSLEngine().getEnabledProtocols()));
+                logger.info("任务状态推送失败");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 
     public static void doServerPush() {

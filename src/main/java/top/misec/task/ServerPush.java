@@ -1,18 +1,15 @@
 package top.misec.task;
 
 import com.google.gson.JsonObject;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-
-import java.util.Arrays;
-
-import javax.net.ssl.SSLContext;
-
 import top.misec.apiquery.ApiList;
 import top.misec.login.ServerVerify;
 import top.misec.utils.HttpUtil;
 import top.misec.utils.LoadFileResource;
+
+import javax.net.ssl.SSLContext;
+import java.util.Arrays;
 
 /**
  * @author @JunzhouLiu @Kurenai

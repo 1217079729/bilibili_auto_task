@@ -9,12 +9,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '12 17 * * *'
-    # cron表达式，Actions时区是UTC时间，所以上午9点要往前推8个小时
-
 
 jobs:
   start:
-
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
@@ -32,7 +29,6 @@ jobs:
             ${{ runner.os }}-maven-
       - name: 运行【哔哩哔哩自动任务】
         env:
-          TZ: Asia/Shanghai
           BILI_JCT: ${{ secrets.BILI_JCT }}
           DEDEUSERID: ${{ secrets.DEDEUSERID }}
           SESSDATA: ${{ secrets.SESSDATA }}

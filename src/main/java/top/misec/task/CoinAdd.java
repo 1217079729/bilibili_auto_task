@@ -1,14 +1,15 @@
 package top.misec.task;
 
 import com.google.gson.JsonObject;
+
+import java.util.Random;
+
 import lombok.extern.log4j.Log4j2;
 import top.misec.apiquery.ApiList;
 import top.misec.apiquery.oftenAPI;
 import top.misec.config.Config;
 import top.misec.login.Verify;
 import top.misec.utils.HttpUtil;
-
-import java.util.Random;
 
 import static top.misec.task.TaskInfoHolder.getVideoId;
 import static top.misec.task.TaskInfoHolder.statusCodeStr;

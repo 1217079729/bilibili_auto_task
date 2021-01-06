@@ -1,15 +1,16 @@
 package top.misec.task;
 
 import com.google.gson.JsonObject;
-import lombok.extern.log4j.Log4j2;
-import top.misec.apiquery.ApiList;
-import top.misec.utils.HttpUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+
+import lombok.extern.log4j.Log4j2;
+import top.misec.apiquery.ApiList;
+import top.misec.utils.HttpUtil;
 
 import static top.misec.task.TaskInfoHolder.calculateUpgradeDays;
 import static top.misec.task.TaskInfoHolder.statusCodeStr;

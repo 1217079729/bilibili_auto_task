@@ -1,10 +1,8 @@
 package top.misec.task;
 
 import com.google.gson.JsonObject;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-
 import top.misec.apiquery.ApiList;
 import top.misec.pojo.userinfobean.Data;
 import top.misec.utils.HttpUtil;
@@ -20,7 +18,7 @@ public class TaskInfoHolder {
 
     static Logger logger = (Logger) LogManager.getLogger(TaskInfoHolder.class.getName());
 
-    public static final String statusCodeStr = "code";
+    public static final String STATUS_CODE_STR = "code";
     public static Data userInfo = null;
     public static GetVideoId getVideoId = new GetVideoId();
 

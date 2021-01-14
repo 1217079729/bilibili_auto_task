@@ -2,11 +2,9 @@ package top.misec.utils;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
+import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-
-import lombok.Data;
 
 /**
  * @author Junzhou Liu
@@ -17,7 +15,7 @@ import lombok.Data;
 public class VersionInfo {
     static Logger logger = (Logger) LogManager.getLogger(VersionInfo.class.getName());
     private static String releaseVersion = "";
-    private static String updateDate = "2020-12-31";
+    private static String updateDate = "2021-01-13";
     private static String projectRepo = "https://github.com/JunzhouLiu/BILIBILI-HELPER";
     private static String releaseInfo = "";
 

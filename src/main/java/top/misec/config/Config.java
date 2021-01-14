@@ -1,11 +1,9 @@
 package top.misec.config;
 
 import com.google.gson.Gson;
-
+import lombok.Data;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-
-import lombok.Data;
 import top.misec.utils.HttpUtil;
 import top.misec.utils.LoadFileResource;
 
@@ -47,12 +45,8 @@ public class Config {
      */
     private int coinAddPriority;
     private String userAgent;
-    private int skipDailyTask;
+    private boolean skipDailyTask;
     private String chargeForLove;
-
-    public int getSkipDailyTask() {
-        return skipDailyTask;
-    }
 
 
     private static Config CONFIG = new Config();

@@ -1,12 +1,13 @@
 package top.misec.apiquery;
 
 import com.google.gson.JsonObject;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-
+import top.misec.config.Config;
 import top.misec.login.Verify;
 import top.misec.utils.HttpUtil;
+
+import java.util.Collections;
 
 /**
  * 部分API简单封装。

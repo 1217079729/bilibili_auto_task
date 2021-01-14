@@ -1,9 +1,0 @@
-{
-  "numberOfCoins": 1,
-  "selectLike": 0,
-  "monthEndAutoCharge": true,
-  "devicePlatform": "ios",
-  "coinAddPriority": 1,
-  "skipDailyTask": 0,
-  "userAgent": "bili-universal/10370 CFNetwork/1206 Darwin/20.1.0 os/ios model/iPhone XR mobi_app/iphone build/10370 osVer/14.2 network/2 channel/AppStore"
-}

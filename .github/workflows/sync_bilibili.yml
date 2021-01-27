@@ -7,7 +7,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-sazs34-scripts
+    types: sync-bilibili
 jobs:
   repo-sync:
     env:

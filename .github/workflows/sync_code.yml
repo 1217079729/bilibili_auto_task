@@ -1,5 +1,5 @@
 # File: .github/workflows/repo-sync.yml
-name: sync-bilibili
+name: sync_code
 on:
   schedule:
     - cron: '30 15 * * *'
@@ -7,7 +7,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-bilibili
+    types: sync_code
 jobs:
   repo-sync:
     env:
